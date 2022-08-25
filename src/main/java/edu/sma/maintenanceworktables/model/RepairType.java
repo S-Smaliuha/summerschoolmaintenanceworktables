@@ -1,9 +1,14 @@
 package edu.sma.maintenanceworktables.model;
 
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
+
 import java.time.LocalDateTime;
 import java.util.Objects;
 
+@Document
 public class RepairType {
+    @Id
     private  String id;
     private String name;
     private int duration;

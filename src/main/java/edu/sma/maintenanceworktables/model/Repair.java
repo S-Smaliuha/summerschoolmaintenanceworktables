@@ -1,35 +1,39 @@
 package edu.sma.maintenanceworktables.model;
 
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
+
 import java.time.LocalDateTime;
 import java.util.Objects;
 
+@Document
 public class Repair {
-
+    @Id
     private String id;
     private String name;
-    private WorkTable idWorkTable;
-    private RepairType idRepairType;
+    private WorkTable workTable;
+    private RepairType repairType;
     private LocalDateTime dateStart;
-    private  String comment;
+    private String comment;
     private LocalDateTime createdAt;
     private LocalDateTime updatedAt;
 
     public Repair() {
     }
 
-    public Repair(String name, WorkTable idWorkTable, RepairType idRepairType, LocalDateTime dateStart, String comment) {
+    public Repair(String name, WorkTable WorkTable, RepairType RepairType, LocalDateTime dateStart, String comment) {
         this.name = name;
-        this.idWorkTable = idWorkTable;
-        this.idRepairType = idRepairType;
+        this.workTable = WorkTable;
+        this.repairType = RepairType;
         this.dateStart = dateStart;
         this.comment = comment;
     }
 
-    public Repair(String id, String name, WorkTable idWorkTable, RepairType idRepairType, LocalDateTime dateStart, String comment, LocalDateTime createdAt, LocalDateTime updatedAt) {
+    public Repair(String id, String name, WorkTable WorkTable, RepairType RepairType, LocalDateTime dateStart, String comment, LocalDateTime createdAt, LocalDateTime updatedAt) {
         this.id = id;
         this.name = name;
-        this.idWorkTable = idWorkTable;
-        this.idRepairType = idRepairType;
+        this.workTable = WorkTable;
+        this.repairType = RepairType;
         this.dateStart = dateStart;
         this.comment = comment;
         this.createdAt = createdAt;
@@ -52,20 +56,20 @@ public class Repair {
         this.name = name;
     }
 
-    public WorkTable getIdWorkTable() {
-        return idWorkTable;
+    public WorkTable getWorkTable() {
+        return workTable;
     }
 
-    public void setIdWorkTable(WorkTable idWorkTable) {
-        this.idWorkTable = idWorkTable;
+    public void setWorkTable(WorkTable workTable) {
+        this.workTable = workTable;
     }
 
-    public RepairType getIdRepairType() {
-        return idRepairType;
+    public RepairType getRepairType() {
+        return repairType;
     }
 
-    public void setIdRepairType(RepairType idRepairType) {
-        this.idRepairType = idRepairType;
+    public void setRepairType(RepairType repairType) {
+        this.repairType = repairType;
     }
 
     public LocalDateTime getDateStart() {
@@ -118,8 +122,8 @@ public class Repair {
         return "Repair{" +
                 "id='" + id + '\'' +
                 ", name='" + name + '\'' +
-                ", idWorkTable=" + idWorkTable +
-                ", idRepairType=" + idRepairType +
+                ", idWorkTable=" + workTable +
+                ", idRepairType=" + repairType +
                 ", dateStart=" + dateStart +
                 ", comment='" + comment + '\'' +
                 ", createdAt=" + createdAt +

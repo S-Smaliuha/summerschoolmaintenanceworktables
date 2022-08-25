@@ -1,0 +1,43 @@
+.title{
+    /*padding: 40px;*/
+    height: 95vh;
+    text-align: center;
+}
+
+.title h1{
+    margin-top: 10%;
+    font-size: 4em;
+}
+
+.title h2 {
+}
+
+#topic{
+    text-decoration: underline;
+    margin-top: 40px;
+    margin-bottom: 80px;
+    font-size: 2em;
+}
+
+#underTitle{
+    margin-top: -30px;
+}
+
+#student{
+    font-family: Lucida Handwriting, sans-serif;
+}
+
+.button {
+    display: inline-block;
+    border-radius: 10px;
+    background-color: #f0f0f0;
+    border: 2px solid black;
+    color: #000000;
+    text-align: center;
+    font-size: 20px;
+    padding: 20px;
+    width: 100px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 20px;
+}
